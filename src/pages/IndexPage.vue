@@ -1,12 +1,3 @@
-<style lang="scss">
-.cc__logos {
-  img {
-    max-width: 120px;
-    max-height: 60px;
-  }
-}
-</style>
-
 <template>
   <div class="text-center">
     <div class="row justify-center">
@@ -65,7 +56,7 @@
       Featuring essential JUs and projects at the heart of Europe's computing
       landscape
     </h6>
-    <div class="row justify-center q-gutter-xl cc__logos q-mb-xl">
+    <div class="row justify-center q-gutter-xl cc__home-logo q-mb-xl">
       <div
         v-for="member in members"
         :key="member.code"

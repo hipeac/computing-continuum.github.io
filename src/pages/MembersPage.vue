@@ -19,20 +19,20 @@
           <div class="col-12 col-md-10" :class="{ 'q-pl-xl': $q.screen.gt.sm }">
             <h5 class="q-mt-none q-mb-sm">
               <span>{{ member.name }}</span>
-              <a
-                v-if="member.links.website"
-                :href="member.links.website"
-                target="_blank"
-              >
+              <div class="q-gutter-md float-right q-ml-xl">
                 <q-btn
+                  v-for="(url, webType) in member.links"
+                  :key="webType"
                   round
                   flat
-                  color="primary"
-                  icon="link"
+                  color="purple"
+                  :icon="websiteIcons[webType] || 'link'"
+                  :href="url"
+                  target="_blank"
                   size="sm"
                   class="q-ml-sm q-mb-xs"
                 />
-              </a>
+              </div>
             </h5>
             <marked-div :text="member.description" />
           </div>
@@ -49,9 +49,19 @@ import { useMeta } from 'quasar';
 import MarkedDiv from 'src/components/MarkedDiv.vue';
 import { useCommonStore } from 'src/stores/common';
 
+import { iconGitHub, iconLinkedIn, iconYouTube, iconX } from 'src/icons';
+
 const commonStore = useCommonStore();
 
 const { members } = storeToRefs(commonStore);
+
+const websiteIcons = {
+  website: 'link',
+  linkedin: iconLinkedIn,
+  github: iconGitHub,
+  twitter: iconX,
+  youtube: iconYouTube,
+};
 
 useMeta(() => {
   return {
