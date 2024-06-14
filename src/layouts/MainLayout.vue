@@ -15,9 +15,15 @@
             <router-link :to="{ name: 'members' }">
               <img src="~assets/cc.svg" class="cc__logo q-my-sm" />
             </router-link>
-            <!--<p v-for="item in site_menu" :key="item[1]" class="text-h4 text-grey-8 text-weight-light">
-              <a :href="item[1]" :class="item[2]" class="flat">{{ item[0] }}</a>
-            </p>-->
+            <p
+              v-for="(item, idx) in menu"
+              :key="idx"
+              class="text-h4 text-grey-8 text-weight-light"
+            >
+              <router-link :to="{ name: item[1] }" class="flat">{{
+                item[0]
+              }}</router-link>
+            </p>
           </div>
         </q-card-section>
       </q-card>
@@ -37,12 +43,18 @@
           <img src="~assets/cc.svg" class="cc__logo q-my-lg" />
         </router-link>
         <q-btn-group stretch flat v-show="$q.screen.gt.sm">
-          <q-btn no-caps :to="{ name: 'members' }" label="Members"></q-btn>
+          <q-btn
+            v-for="(item, idx) in menu"
+            :key="idx"
+            no-caps
+            :to="{ name: item[1] }"
+            :label="item[0]"
+          ></q-btn>
         </q-btn-group>
         <q-space />
         <a
           v-if="true"
-          href="https://cloud.hipeac.net/index.php/apps/files/favorites/56571?dir=/Computing%20Continuum"
+          href="https://cloud.hipeac.net/apps/files/files/56571?dir=/Computing%20Continuum"
           target="_blank"
         >
           <q-btn rounded flat icon="cloud_queue" size="md" />
@@ -126,4 +138,8 @@ import { ref } from 'vue';
 import { iconGitHub, iconMastodon } from 'src/icons';
 
 const visibleDialogMenu = ref(false);
+const menu = [
+  ['Mission statement', 'mission'],
+  ['Members', 'members'],
+];
 </script>

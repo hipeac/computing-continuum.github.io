@@ -1,16 +1,25 @@
 # Computing Continuum (computing-continuum)
 
-Computing Continuum is a collaborative platform driving Europe's computing systems innovation and alignment
+This repository contains the source code for the Computing Continuum website.
+Development is done using Vue and the Quasar framework, but the final website is a static site.
 
-## Install the dependencies
+## Updating the website
+
+Information about members can be updated in the `src/data` folders.
+Related assets can be updated in the `src/assets` folder.
+
+Feel free to open a pull request with your changes.
+
+## Development
+
+### Install Quasar CLI and dependencies
 
 ```bash
+yarn global add @quasar/cli
 yarn
-# or
-npm install
 ```
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
+### Start the app in development mode
 
 ```bash
 quasar dev
@@ -20,24 +29,18 @@ quasar dev
 
 ```bash
 yarn lint
-# or
-npm run lint
 ```
 
 ### Format the files
 
 ```bash
 yarn format
-# or
-npm run format
 ```
 
 ### Build the app for production
 
+Currently we are only exporting the application in SPA mode.
+
 ```bash
 quasar build
 ```
-
-### Customize the configuration
-
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).

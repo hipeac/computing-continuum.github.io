@@ -18,6 +18,12 @@ const routes: RouteRecordRaw[] = [
         strict: true,
         component: () => import('pages/MembersPage.vue'),
       },
+      {
+        path: '/mission-statement/',
+        name: 'mission',
+        strict: true,
+        component: () => import('pages/MissionPage.vue'),
+      },
     ],
   },
 

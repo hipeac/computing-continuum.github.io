@@ -1,7 +1,7 @@
 {
   "name": "computing-continuum",
   "version": "0.0.1",
-  "description": "Computing Continuum is a collaborative platform driving Europe's computing systems innovation and alignment",
+  "description": "Computing Continuum is a collaborative platform driving Europe's computing systems innovation and alignment.",
   "productName": "Computing Continuum",
   "author": "Eneko Illarramendi <eneko.illarramendi@ugent.be>",
   "type": "module",
