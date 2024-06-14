@@ -11,16 +11,16 @@
             text-color="dark"
             v-close-popup
           />
-          <div class="q-gutter-y-md text-center q-pb-xl">
+          <div class="q-gutter-y-md text-center q-pt-none q-pb-xl">
             <router-link :to="{ name: 'members' }">
-              <img src="~assets/cc.svg" class="cc__logo q-my-sm" />
+              <img src="~assets/cc.svg" class="cc__logo" />
             </router-link>
             <p
               v-for="(item, idx) in menu"
               :key="idx"
               class="text-h4 text-grey-8 text-weight-light"
             >
-              <router-link :to="{ name: item[1] }" class="flat">{{
+              <router-link :to="{ name: item[1] }" class="text-body1 text-inherit">{{
                 item[0]
               }}</router-link>
             </p>
@@ -37,12 +37,12 @@
           @click="visibleDialogMenu = !visibleDialogMenu"
           icon="menu"
           class="q-mr-sm"
-          style="margin-left: -12px"
         ></q-btn>
-        <router-link :to="{ name: 'home' }" class="q-mr-xl">
+        <q-space v-if="$q.screen.lt.md" />
+        <router-link :to="{ name: 'home' }">
           <img src="~assets/cc.svg" class="cc__logo q-my-lg" />
         </router-link>
-        <q-btn-group stretch flat v-show="$q.screen.gt.sm">
+        <q-btn-group stretch flat v-if="$q.screen.gt.sm" class="q-ml-xl">
           <q-btn
             v-for="(item, idx) in menu"
             :key="idx"
@@ -57,18 +57,18 @@
           href="https://cloud.hipeac.net/apps/files/files/56571?dir=/Computing%20Continuum"
           target="_blank"
         >
-          <q-btn rounded flat icon="cloud_queue" size="md" />
+          <q-btn round flat icon="cloud_queue" size="md" />
         </a>
       </q-toolbar>
     </q-header>
 
     <q-page-container>
       <q-page
+        class="q-pa-lg"
         :class="{
-          'q-py-xs q-px-lg': $q.screen.gt.sm,
-          'q-py-none bg-white': $q.screen.lt.md,
+          'q-py-xs': $q.screen.gt.sm,
+          'bg-white': $q.screen.lt.md,
         }"
-        style="margin-top: 56px"
       >
         <div class="container">
           <router-view />
@@ -77,7 +77,7 @@
     </q-page-container>
 
     <q-footer
-      class="bg-transparent text-grey-8 q-py-xl"
+      class="bg-transparent text-grey-8 q-px-lg q-py-xl"
       :class="{ 'q-px-xl': $q.screen.gt.sm }"
     >
       <div class="container">

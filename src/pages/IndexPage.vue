@@ -10,12 +10,12 @@
 <template>
   <div class="text-center">
     <div class="row justify-center">
-      <div class="col-12 col-md-11">
-        <h4>
+      <div class="col-12 col-md-11 q-pt-lg">
+        <h3 :class="{'text-h4': $q.screen.lt.md }">
           Computing Continuum is a collaborative platform driving Europe's
           computing systems innovation and alignment. We focus on research,
           technology development, and strategic partnerships.
-        </h4>
+        </h3>
       </div>
     </div>
     <div class="row q-col-gutter-x-xl q-my-xl q-py-xl">
@@ -81,10 +81,17 @@
 
 <script setup lang="ts">
 import { storeToRefs } from 'pinia';
+import { useMeta } from 'quasar';
 
 import { useCommonStore } from 'src/stores/common';
 
 const commonStore = useCommonStore();
 
 const { members } = storeToRefs(commonStore);
+
+useMeta(() => {
+  return {
+    title: 'Computing Continuum',
+  };
+});
 </script>
