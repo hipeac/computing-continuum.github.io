@@ -1,0 +1,61 @@
+// app global css in SCSS form
+
+// app global css in SCSS form
+
+$container-width: 1000px;
+$sidebar-width: 280px;
+$breakpoint-xs: 599px !default;
+
+body {
+  font-family: 'Poppins', 'Roboto', sans-serif;
+}
+
+.cc__logo,
+.eu__logo {
+  height: 40px;
+}
+
+.cc__layout {
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: $container-width;
+  }
+
+  @media (min-width: $container-width) {
+    .q-toolbar {
+      padding: 0;
+    }
+  }
+}
+
+.text-small {
+  font-size: small !important;
+}
+
+.text-smaller {
+  font-size: smaller !important;
+}
+
+samp,
+.text-mono {
+  font-family: monospace, monospace;
+
+  .text-body2 &,
+  &.text-body2 {
+    font-size: 0.85em;
+  }
+}
+
+.text-inherit {
+  color: inherit;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

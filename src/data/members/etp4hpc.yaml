@@ -1,0 +1,17 @@
+---
+code: etp4hpc
+name: ETP4HPC
+long_name: European Technology Platform (ETP) for High-Performance Computing (HPC)
+
+description: |
+  ETP4HPC is a private, industry-led and non-profit association. Our main mission is to promote European HPC research
+  and innovation in order to maximise the economic and societal benefit of HPC for European science, industry and
+  citizens. Our main task is to propose research priorities and programme contents in the area of HPC technology and
+  usage, by issuing a Strategic Research Agenda (SRA). This SRA is used by the EuroHPC Joint Undertaking (JU) to define
+  the contents of the HPC Technology Work Programmes.
+
+links:
+  website: https://www.hipeac.net/
+  twitter: https://twitter.com/hipeac
+  linkedin: https://www.linkedin.com/company/hipeac/
+  youtube: https://www.youtube.com/@hipeac

@@ -1,0 +1,12 @@
+---
+code: destination-earth
+name: Destination Earth
+long_name: Destination Earth
+
+description: |
+  Destination Earth is a collaborative effort aimed at building a digital twin of the Earth, focusing on climate change
+  and extreme weather events. It leverages Europe's HPC computers and AI capacity for high-resolution modeling to
+  predict and adapt to climate impacts, enhancing our response to natural disasters.
+
+links:
+  website: https://destination-earth.eu/
