@@ -1,17 +1,25 @@
 <template>
-  <div>
-    <div class="row justify-center">
-      <div class="col-12 col-md-11 text-center">
-        <h4 :class="{'text-h5': $q.screen.lt.md }">
-          Explore the core projects driving Computing Continuum, each pivotal to
-          advancing Europe's computing ecosystem.
-        </h4>
-      </div>
+  <div class="bg-indigo-1 q-px-lg q-py-md">
+    <div class="container">
+      <h5 class="text-caption">Computing Continuum Members</h5>
+      <p class="text-h5 q-pb-lg">
+        Explore the core projects driving Computing Continuum, each pivotal to
+        advancing Europe's computing ecosystem.
+      </p>
     </div>
+  </div>
+  <div class="container q-py-lg" :class="{ 'q-px-lg': $q.screen.lt.md }">
     <q-list separator>
-      <q-item v-for="member in members" :key="member.code" class="q-pt-lg q-px-none">
+      <q-item
+        v-for="member in members"
+        :key="member.code"
+        class="q-pt-lg q-px-none"
+      >
         <div class="row items-center q-col-gutter-x-xl">
-          <div class="col-5 col-sm-3 col-md" :class="{ 'text-center': $q.screen.gt.sm }">
+          <div
+            class="col-5 col-sm-3 col-md"
+            :class="{ 'text-center': $q.screen.gt.sm }"
+          >
             <a :href="member.links.website" target="_blank">
               <img :src="member.logo_src" class="cc__member-logo q-my-md" />
             </a>
@@ -24,12 +32,12 @@
                   v-for="(url, webType) in member.links"
                   :key="webType"
                   round
-                  flat
-                  color="purple"
+                  outline
+                  color="indigo"
                   :icon="websiteIcons[webType] || 'link'"
                   :href="url"
                   target="_blank"
-                  size="sm"
+                  size="xs"
                   class="q-ml-sm q-mb-xs"
                 />
               </div>
@@ -56,7 +64,7 @@ const commonStore = useCommonStore();
 const { members } = storeToRefs(commonStore);
 
 const websiteIcons = {
-  website: 'link',
+  website: 'public',
   linkedin: iconLinkedIn,
   github: iconGitHub,
   twitter: iconX,

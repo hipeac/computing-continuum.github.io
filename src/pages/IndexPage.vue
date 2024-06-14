@@ -1,15 +1,18 @@
 <template>
-  <div class="text-center">
-    <div class="row justify-center">
-      <div class="col-12 col-md-11 q-pt-lg">
-        <h3 :class="{'text-h4': $q.screen.lt.md }">
-          Computing Continuum is a collaborative platform driving Europe's
-          computing systems innovation and alignment. We focus on research,
-          technology development, and strategic partnerships.
-        </h3>
-      </div>
+  <div class="bg-indigo text-white q-pa-lg">
+    <div class="container">
+      <h4 :class="{ 'text-h5': $q.screen.lt.md }">
+        Computing Continuum is a <strong>collaborative platform</strong> driving
+        Europe's computing systems innovation and alignment. We focus on
+        research, technology development, and strategic partnerships.
+      </h4>
     </div>
-    <div class="row q-col-gutter-x-xl q-my-xl q-py-xl">
+  </div>
+  <div
+    class="container text-center q-py-lg"
+    :class="{ 'q-px-lg': $q.screen.lt.md }"
+  >
+    <div class="row q-col-gutter-x-xl q-my-xl">
       <div class="col-12 col-md">
         <q-icon
           name="lightbulb"

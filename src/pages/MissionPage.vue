@@ -6,12 +6,10 @@
 </style>
 
 <template>
-  <div>
-    <div class="row justify-center">
-      <div class="col-12 col-md-11 text-center">
-        <h4 :class="{'text-h5': $q.screen.lt.md }">Mission statement</h4>
-        <marked-div :text="mission.content" />
-      </div>
+  <div class="bg-indigo-1 q-px-lg q-py-md">
+    <div class="container">
+      <h5 class="text-caption">Mission statement</h5>
+      <marked-div :text="mission.content" class="text-h5 q-pb-lg" />
     </div>
   </div>
 </template>

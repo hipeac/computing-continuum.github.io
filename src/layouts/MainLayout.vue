@@ -20,15 +20,17 @@
               :key="idx"
               class="text-h4 text-grey-8 text-weight-light"
             >
-              <router-link :to="{ name: item[1] }" class="text-body1 text-inherit">{{
-                item[0]
-              }}</router-link>
+              <router-link
+                :to="{ name: item[1] }"
+                class="text-body1 text-inherit"
+                >{{ item[0] }}</router-link
+              >
             </p>
           </div>
         </q-card-section>
       </q-card>
     </q-dialog>
-    <q-header bordered class="bg-white text-dark cc__header">
+    <q-header bordered class="bg-indigo-10 cc__header">
       <q-toolbar class="cc__toolbar container">
         <q-btn
           flat
@@ -40,7 +42,7 @@
         ></q-btn>
         <q-space v-if="$q.screen.lt.md" />
         <router-link :to="{ name: 'home' }">
-          <img src="~assets/cc.svg" class="cc__logo q-my-lg" />
+          <img src="~assets/cc.svg" class="cc__logo q-mt-lg q-mb-md" />
         </router-link>
         <q-btn-group stretch flat v-if="$q.screen.gt.sm" class="q-ml-xl">
           <q-btn
@@ -57,22 +59,14 @@
           href="https://cloud.hipeac.net/apps/files/files/56571?dir=/Computing%20Continuum"
           target="_blank"
         >
-          <q-btn round flat icon="cloud_queue" size="md" />
+          <q-btn round flat icon="cloud_queue" size="md" color="indigo-4" />
         </a>
       </q-toolbar>
     </q-header>
 
     <q-page-container>
-      <q-page
-        class="q-pa-lg"
-        :class="{
-          'q-py-xs': $q.screen.gt.sm,
-          'bg-white': $q.screen.lt.md,
-        }"
-      >
-        <div class="container">
-          <router-view />
-        </div>
+      <q-page class="q-py-xs">
+        <router-view />
       </q-page>
     </q-page-container>
 

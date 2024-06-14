@@ -12,7 +12,10 @@ export const useCommonStore = defineStore('common', () => {
       const sortedLinks = Object.fromEntries(
         Object.entries(links)
           .filter(([key]) => validLinks.includes(key))
-          .sort(([key1], [key2]) => validLinks.indexOf(key1) - validLinks.indexOf(key2)),
+          .sort(
+            ([key1], [key2]) =>
+              validLinks.indexOf(key1) - validLinks.indexOf(key2),
+          ),
       );
       return {
         ...member,
