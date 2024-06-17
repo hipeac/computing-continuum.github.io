@@ -5,7 +5,14 @@ import data from 'src/data/members';
 
 export const useCommonStore = defineStore('common', () => {
   const members = computed<Member[]>(() => {
-    const validLinks = ['website', 'github', 'linkedin', 'twitter', 'youtube'];
+    const validLinks = [
+      'website',
+      'zenodo',
+      'github',
+      'linkedin',
+      'twitter',
+      'youtube',
+    ];
 
     return (Object.values(data) as Member[]).map((member) => {
       const links = member.links;

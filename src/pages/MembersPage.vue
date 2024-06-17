@@ -34,8 +34,9 @@
                   round
                   outline
                   color="indigo"
-                  :icon="websiteIcons[webType] || 'link'"
+                  :icon="websiteMeta[webType].icon || 'link'"
                   :href="url"
+                  :title="websiteMeta[webType].title"
                   target="_blank"
                   size="xs"
                   class="q-ml-sm q-mb-xs"
@@ -57,18 +58,43 @@ import { useMeta } from 'quasar';
 import MarkedDiv from 'src/components/MarkedDiv.vue';
 import { useCommonStore } from 'src/stores/common';
 
-import { iconGitHub, iconLinkedIn, iconYouTube, iconX } from 'src/icons';
+import {
+  iconGitHub,
+  iconLinkedIn,
+  iconYouTube,
+  iconX,
+  iconZenodo,
+} from 'src/icons';
 
 const commonStore = useCommonStore();
 
 const { members } = storeToRefs(commonStore);
 
-const websiteIcons = {
-  website: 'public',
-  linkedin: iconLinkedIn,
-  github: iconGitHub,
-  twitter: iconX,
-  youtube: iconYouTube,
+const websiteMeta = {
+  website: {
+    icon: 'public',
+    title: 'Website',
+  },
+  zenodo: {
+    icon: iconZenodo,
+    title: 'Zenodo',
+  },
+  linkedin: {
+    icon: iconLinkedIn,
+    title: 'LinkedIn',
+  },
+  github: {
+    icon: iconGitHub,
+    title: 'GitHub',
+  },
+  twitter: {
+    icon: iconX,
+    title: 'Twitter / X',
+  },
+  youtube: {
+    icon: iconYouTube,
+    title: 'YouTube',
+  },
 };
 
 useMeta(() => {
