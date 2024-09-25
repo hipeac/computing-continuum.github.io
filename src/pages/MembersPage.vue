@@ -3,23 +3,15 @@
     <div class="container">
       <h5 class="text-caption">Computing Continuum Members</h5>
       <p class="text-h5 q-pb-lg">
-        Explore the core projects driving Computing Continuum, each pivotal to
-        advancing Europe's computing ecosystem.
+        Explore the core projects driving Computing Continuum, each pivotal to advancing Europe's computing ecosystem.
       </p>
     </div>
   </div>
   <div class="container q-py-lg" :class="{ 'q-px-lg': $q.screen.lt.md }">
     <q-list separator>
-      <q-item
-        v-for="member in members"
-        :key="member.code"
-        class="q-pt-lg q-px-none"
-      >
+      <q-item v-for="member in members" :key="member.code" class="q-pt-lg q-px-none">
         <div class="row items-center q-col-gutter-x-xl">
-          <div
-            class="col-5 col-sm-3 col-md"
-            :class="{ 'text-center': $q.screen.gt.sm }"
-          >
+          <div class="col-5 col-sm-3 col-md" :class="{ 'text-center': $q.screen.gt.sm }">
             <a :href="member.links.website" target="_blank">
               <img :src="member.logo_src" class="cc__member-logo q-my-md" />
             </a>
@@ -58,13 +50,7 @@ import { useMeta } from 'quasar';
 import MarkedDiv from 'src/components/MarkedDiv.vue';
 import { useCommonStore } from 'src/stores/common';
 
-import {
-  iconGitHub,
-  iconLinkedIn,
-  iconYouTube,
-  iconX,
-  iconZenodo,
-} from 'src/icons';
+import { iconGitHub, iconLinkedIn, iconYouTube, iconX, iconZenodo } from 'src/icons';
 
 const commonStore = useCommonStore();
 

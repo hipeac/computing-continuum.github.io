@@ -3,28 +3,13 @@
     <q-dialog v-model="visibleDialogMenu" position="top" full-width full-height>
       <q-card class="bg-particles">
         <q-card-section>
-          <q-btn
-            unelevated
-            round
-            icon="close"
-            color="white"
-            text-color="dark"
-            v-close-popup
-          />
+          <q-btn unelevated round icon="close" color="white" text-color="dark" v-close-popup />
           <div class="q-gutter-y-md text-center q-pt-none q-pb-xl">
             <router-link :to="{ name: 'members' }">
               <img src="~assets/cc.svg" class="cc__logo" />
             </router-link>
-            <p
-              v-for="(item, idx) in menu"
-              :key="idx"
-              class="text-h4 text-grey-8 text-weight-light"
-            >
-              <router-link
-                :to="{ name: item[1] }"
-                class="text-body1 text-inherit"
-                >{{ item[0] }}</router-link
-              >
+            <p v-for="(item, idx) in menu" :key="idx" class="text-h4 text-grey-8 text-weight-light">
+              <router-link :to="{ name: item[1] }" class="text-body1 text-inherit">{{ item[0] }}</router-link>
             </p>
           </div>
         </q-card-section>
@@ -45,13 +30,7 @@
           <img src="~assets/cc.svg" class="cc__logo q-mt-lg q-mb-md" />
         </router-link>
         <q-btn-group stretch flat v-if="$q.screen.gt.sm" class="q-ml-xl">
-          <q-btn
-            v-for="(item, idx) in menu"
-            :key="idx"
-            no-caps
-            :to="{ name: item[1] }"
-            :label="item[0]"
-          ></q-btn>
+          <q-btn v-for="(item, idx) in menu" :key="idx" no-caps :to="{ name: item[1] }" :label="item[0]"></q-btn>
         </q-btn-group>
         <q-space />
         <a
@@ -70,19 +49,10 @@
       </q-page>
     </q-page-container>
 
-    <q-footer
-      class="bg-transparent text-grey-8 q-px-lg q-py-xl"
-      :class="{ 'q-px-xl': $q.screen.gt.sm }"
-    >
+    <q-footer class="bg-transparent text-grey-8 q-px-lg q-py-xl" :class="{ 'q-px-xl': $q.screen.gt.sm }">
       <div class="container">
-        <div
-          class="row q-col-gutter-lg justify-between text-caption"
-          :class="{ reverse: $q.screen.gt.sm }"
-        >
-          <div
-            class="col-12 col-md-3 q-pt-xl"
-            :class="{ 'text-right': $q.screen.gt.sm }"
-          >
+        <div class="row q-col-gutter-lg justify-between text-caption" :class="{ reverse: $q.screen.gt.sm }">
+          <div class="col-12 col-md-3 q-pt-xl" :class="{ 'text-right': $q.screen.gt.sm }">
             <img src="~assets/eu-horizon.svg" class="eu__logo" />
           </div>
           <div class="col-12 col-md-9">

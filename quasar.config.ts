@@ -37,7 +37,7 @@ export default configure((/* ctx */) => {
     build: {
       target: {
         browser: ['es2022', 'firefox115', 'chrome115', 'safari14'],
-        node: 'node20',
+        node: 'node22',
       },
 
       vueRouterMode: 'hash', // available values: 'hash', 'history'
@@ -201,7 +201,7 @@ export default configure((/* ctx */) => {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'computing-continuum',
+        appId: 'eu.computing-continuum.app',
       },
     },
 

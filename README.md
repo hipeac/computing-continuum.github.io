@@ -22,7 +22,7 @@ yarn
 ### Start the app in development mode
 
 ```bash
-quasar dev
+yarn dev
 ```
 
 ### Lint the files
@@ -39,8 +39,8 @@ yarn format
 
 ### Build the app for production
 
-Currently we are only exporting the application in SPA mode.
+Currently we are only exporting the application in PWA mode.
 
 ```bash
-quasar build
+yarn build
 ```

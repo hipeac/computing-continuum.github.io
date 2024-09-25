@@ -6,6 +6,9 @@ import {
   fabMastodon,
   fabGithub,
 } from '@quasar/extras/fontawesome-v6';
+import { symRoundedCached } from '@quasar/extras/material-symbols-rounded';
+
+export const iconCached = symRoundedCached;
 
 export const iconGitHub = fabGithub;
 export const iconLinkedIn = fabLinkedin;
