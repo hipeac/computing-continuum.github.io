@@ -27,7 +27,7 @@
         ></q-btn>
         <q-space v-if="$q.screen.lt.md" />
         <router-link :to="{ name: 'home' }">
-          <img src="~assets/cc.svg" class="cc__logo q-mt-lg q-mb-md" />
+          <img src="~assets/cc.svg" class="cc__logo q-my-lg" />
         </router-link>
         <q-btn-group stretch flat v-if="$q.screen.gt.sm" class="q-ml-xl">
           <q-btn v-for="(item, idx) in menu" :key="idx" no-caps :to="{ name: item[1] }" :label="item[0]"></q-btn>
@@ -64,7 +64,7 @@
             </p>
             <div class="q-gutter-x-lg q-my-md text-grey">
               <a
-                href="https://github.com/computing-continuum"
+                href="https://github.com/hipeac/computing-continuum.github.io"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"

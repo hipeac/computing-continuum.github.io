@@ -10,7 +10,10 @@ body {
   font-family: 'Poppins', 'Roboto', sans-serif;
 }
 
-.cc__logo,
+.cc__logo {
+  height: 64px;
+}
+
 .eu__logo {
   height: 32px;
 }
